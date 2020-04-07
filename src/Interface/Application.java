@@ -3,15 +3,15 @@ package Interface;
 import javax.swing.*;
 import java.awt.*;
 
-public class GuiApplication extends JFrame {
+public class Application extends JFrame {
     private InputPanel inputPanel;
     private OutputPanel outputPanel;
 
-    public GuiApplication() {
+    public Application() {
         super("OOP Lab3");
         setLayout(new GridBagLayout());
         outputPanel = new OutputPanel();
-        inputPanel = new InputPanel(outputPanel.getLabels());
+        inputPanel = new InputPanel(outputPanel);
         GridBagConstraints inputPanelConstraints = new GridBagConstraints();
         inputPanelConstraints.fill = GridBagConstraints.NONE;
         inputPanelConstraints.weightx = 0;
@@ -25,14 +25,8 @@ public class GuiApplication extends JFrame {
         outputPanelConstraints.gridx = 1;
         outputPanelConstraints.gridy = 0;
         add(outputPanel, outputPanelConstraints);
-//        controlPanel = new ControlPanel();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        addComponentsToPane(mapPanel, controlPanel);
         pack();
         setVisible(true);
-    }
-
-    public OutputPanel getOutputPanel() {
-        return outputPanel;
     }
 }

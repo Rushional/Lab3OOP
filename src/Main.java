@@ -1,7 +1,5 @@
 import Interface.ApplicationInitiator;
-import Interface.GuiApplication;
-
-import java.util.Scanner;
+import Interface.Application;
 
 // Everything is in English to minimize readability and maximize confusion!
 public class Main {
@@ -9,6 +7,6 @@ public class Main {
 //        var application = new Model.Application();
 //        application.run();
         ApplicationInitiator initiator = new ApplicationInitiator();
-        GuiApplication application = initiator.startApplication();
+        Application application = initiator.startApplication();
     }
 }

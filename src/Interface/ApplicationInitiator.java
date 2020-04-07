@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.lang.reflect.InvocationTargetException;
 
 public class ApplicationInitiator {
-    private GuiApplication application;
+    private Application application;
 
-    public GuiApplication startApplication() {
+    public Application startApplication() {
         try {
             SwingUtilities.invokeAndWait(() -> {
-                application = new GuiApplication();
+                application = new Application();
             });
         } catch (InterruptedException | InvocationTargetException e) {
             e.printStackTrace(System.out);

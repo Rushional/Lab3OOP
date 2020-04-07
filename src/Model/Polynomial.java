@@ -17,6 +17,10 @@ public class Polynomial {
         System.out.println(a.realPart + "x^2 + " + b.realPart + "x + " + c.realPart);
     }
 
+    public String asString() {
+        return (a.realPart + "x^2 + " + b.realPart + "x + " + c.realPart);
+    }
+
     //If I need roots amount, I can call x.length
 //    I'd probably create another class called RootsCalculator or something like that have this method public there
     public static ComplexNumber[] calculateRoots(Polynomial polynomial) {

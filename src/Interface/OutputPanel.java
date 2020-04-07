@@ -22,7 +22,7 @@ public class OutputPanel extends JPanel {
         polynomialOutputConstraints.gridx = 0;
         polynomialOutputConstraints.gridy = 0;
         add(labelPolynomialOutput, polynomialOutputConstraints);
-        labelValueOutput = new JLabel("The value of the polynomial is: ");
+        labelValueOutput = new JLabel("Input an argument to calculate the value of the polynomial");
         GridBagConstraints valueOutputConstraints = new GridBagConstraints();
         valueOutputConstraints.anchor = GridBagConstraints.WEST;
         valueOutputConstraints.insets.left = 50;
@@ -42,6 +42,18 @@ public class OutputPanel extends JPanel {
         labelRootsOutputConstraints.gridx = 0;
         labelRootsOutputConstraints.gridy = 2;
         add(labelRootsOutput, labelRootsOutputConstraints);
+    }
+
+    void outputPolynomial(String polynomial) {
+        labelPolynomialOutput.setText("Current polynomial is: " + polynomial);
+    }
+
+    void outputValue(String argument, String value) {
+        labelValueOutput.setText("The value of the polynomial with the argument " + argument + " is: " + value);
+    }
+
+    void outputRoots(String roots) {
+        labelRootsOutput.setText("The roots of the polynomial are: " + roots);
     }
 
     public JLabel[] getLabels() {
